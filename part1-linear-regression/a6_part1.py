@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 data = pd.read_csv("part1-linear-regression/blood_pressure_data.csv")
-x = data["Age"]
-y = data["Blood Pressure"]
+x = data["Age"].values
+y = data["Blood Pressure"].values
 
 # Use reshape to turn the x values into 2D arrays:
-x = x.reshape(-1,1)
+x = x.reshape(-1, 1)
 
 # Create the model
 model = LinearRegression().fit(x, y)
@@ -40,12 +40,9 @@ plt.xlabel("Age")
 plt.ylabel("Blood Pressure")
 plt.title("Blood Pressure vs. Age")
 
-# prints the correlation coefficient
-print(f"Correlation between Blood Pressure and Age: {x.corr(y)}")
-
 # labels the axes
 plt.xlabel("Age (Years)")
-plt.ylabel("Blood Pressure")
+plt.ylabel("Blood Pressure (mmHG)")
 plt.title("Age by Blood Pressure")
 
 # plot the line of best fit in red and label the line
