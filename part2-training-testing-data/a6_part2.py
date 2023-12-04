@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 '''
 **********CREATE THE MODEL**********
 '''
-
+# imports the data and sets x and y values
 data = pd.read_csv("part2-training-testing-data/blood_pressure_data.csv")
 x = data["Age"].values
 y = data["Blood Pressure"].values
@@ -22,7 +22,7 @@ print(f"ytrain {ytrain}")
 print(f"ytest {ytest}")
 
 # Use reshape to turn the x values into 2D arrays:
-xtrain = xtrain.reshape(-1,1)
+xtrain = xtrain.reshape(-1, 1)
 
 # Create the model
 model = LinearRegression().fit(xtrain, ytrain)
@@ -31,7 +31,7 @@ model = LinearRegression().fit(xtrain, ytrain)
 # Each should be a float and rounded to two decimal places. 
 coef = round(float(model.coef_), 2)
 intercept = round(float(model.intercept_), 2)
-r_squared = model.score(x, y)
+r_squared = model.score(xtrain, ytrain)
 
 # Print out the linear equation and r squared value:
 print("Model's Linear Equation: y=",coef, "x+", intercept)
@@ -66,13 +66,13 @@ plt.figure(figsize=(5,4))
 
 #creates a scatter plot and labels the axes
 plt.scatter(xtrain,ytrain, c="purple", label="Training Data")
-plt.scatter(xtest, ytest, c="green", label="Testing Data")
+plt.scatter(xtest, ytest, c="blue", label="Testing Data")
 
-plt.scatter(xtest, predict, c="red", label="Predictions")
+plt.scatter(xtest, predict, c="green", label="Predictions")
 
 plt.xlabel("Age (Years)")
 plt.ylabel("Blood Pressure (mmHG)")
-plt.title("Age by Blood Pressure")
+plt.title("Blood Pressure by Age")
 plt.plot(x, coef*x + intercept, c="r", label="Line of Best Fit")
 
 plt.legend()
