@@ -30,6 +30,16 @@ print("***************")
 print("Testing Results")
 # get the predicted y values for the xtest values - returns an array of the results
 predict = model.predict(xtest)
+
+# anwers writeup questions 
+carOne = model.predict([[89, 10]])
+carTwo = model.predict([[150, 20]])
+print("A 10 year old car with 89,000 miles is worth $", carOne)
+print("A 20 year old car with 150,000 miles is worth $", carTwo)
+
+carThree = model.predict([[999, 100]])
+print("Testing #4 on writeup. This car is worth $", carThree)
+
 # round the value in the np array to 2 decimal places
 predict = np.around(predict, 2)
 print(predict)
