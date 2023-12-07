@@ -5,7 +5,7 @@ After completing `a6_part3.py` answer the following questions
 ## Questions to answer
 
 1. # What is the R Squared coefficient for your model? What does that mean about the model in relation to your data?
-The r squared coefficient for my model is 0.86. What this means about the model in relation to my data is that the model has been trained well on the data and is an accurate representation of it.
+The r squared coefficient for my model is 0.86. What this means about the model in relation to my data is that the model has been trained well on the data and is an accurate representation of it. The model is representative of the data.
 
 2. # Is your model accurate? Why or why not?
 My model is accurate because there is a strong correlation in the data. The 0.86 squared coefficient is close to the perfect correlation coefficient of 1, showing that the data has a strong correlation.  
