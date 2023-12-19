@@ -58,7 +58,9 @@ for index in range(len(x_test)):
     print("")
 
 #### for writeup
-femaleBuy = model.predict([[34, 56000, 1]])
-print("A 34-year-old female will", femaleBuy)
+female = [[34, 56000, 1]]
+femaleBuy = model.predict(female)
+femaleBuy_scaled = scaler.transform(female)
+print("A 34-year-old female will", femaleBuy_scaled)
 
 
