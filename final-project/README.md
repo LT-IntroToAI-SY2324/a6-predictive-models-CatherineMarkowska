@@ -10,7 +10,7 @@ Our dataset is the abalone dataset on UC Irving's machine learning repository.
 Citation: Nash,Warwick, Sellers,Tracy, Talbot,Simon, Cawthorn,Andrew, and Ford,Wes. (1995). Abalone. UCI Machine Learning Repository. https://archive.ics.uci.edu/dataset/1/abalone
 
 2. # Determine which algorithm is the best fit. Based on the dataset you choose, you will need to figure out which algorithm to use. This will require you to get to know your data and your goals! Is there a linear correlation between variables? Are you looking for numerical value or a label/category? Do you know the labels or do you need the model to create them for you?
-
+We are using an unsupervised learning algorithm. There might not be a linear correlation between variables. We are looking for a label/category, but we do not know what labels we need. Thus, unsupervised learning is the best for our purpose. 
 
 # - Do some tests with matplotlib and visualize your data.  Does it provide a good correlation?  Why or why not?
 
@@ -24,4 +24,4 @@ Citation: Nash,Warwick, Sellers,Tracy, Talbot,Simon, Cawthorn,Andrew, and Ford,W
 - # A prediction based on your model
 - # A summary of the accuracy of your model
 - # Real world implications
-
+We chose to use unsupervised learning because we wanted it to create clusters for us based on the abalone's weight, height, 
